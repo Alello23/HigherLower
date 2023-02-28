@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">higherlower</string>
+
+    <string name="answer_extra">has</string>
+    <string name="answer_extra2">average monthly searches</string>
+    <string name="higher">higher</string>
+    <string name="lower">lower</string>
+
+    <string name="question1">ElRubius</string>
+    <string name="total1">330</string>
+    <string name="question2">alello23</string>
+    <string name="total2">1000</string>
+    <string name="question3">blue</string>
+    <string name="total3">2000</string>
+    <string name="question4">cat</string>
+    <string name="total4">100000</string>
+
 </resources>
