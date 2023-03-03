@@ -10,7 +10,7 @@ public class Pregunta {
 
     public Pregunta(int pregunta, int total) {
         this.pregunta = pregunta;
-        this.pregunta = total;
+        this.total = total;
     }
     public int setImagen(){
         return imagen;
