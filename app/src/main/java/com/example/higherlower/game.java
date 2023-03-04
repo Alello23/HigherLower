@@ -142,7 +142,7 @@ public class game extends AppCompatActivity {
 
         int temp = Integer.parseInt (number);
         String a = "";
-        while (temp >= 100){
+        while (temp >= 1000){
             int num = temp % 1000;
             temp = temp/1000;
             if(num == 0){
@@ -153,8 +153,6 @@ public class game extends AppCompatActivity {
             }
             else if (num < 100){
                 a = ",0" + String.valueOf(num) + a;
-            }else{
-                a = "," + String.valueOf(num) + a;
             }
         }
         if (temp != 0) {
