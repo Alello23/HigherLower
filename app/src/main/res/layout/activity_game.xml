@@ -9,48 +9,75 @@
     <ImageView
         android:id="@+id/imagenQuestion"
         android:layout_width="413dp"
-        android:layout_height="376dp"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="-5dp"
+        android:layout_height="374dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/imageAnswer"
-        android:layout_width="414dp"
-        android:layout_height="361dp"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="371dp"
+        android:layout_width="412dp"
+        android:layout_height="355dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagenQuestion"
+        app:layout_constraintVertical_bias="1.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/bLower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="563dp" />
+        android:layout_marginTop="4dp"
+        android:text="lower"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bHigher"
+        app:layout_constraintVertical_bias="0.088" />
 
     <Button
         android:id="@+id/bHigher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="504dp" />
+        android:text="higher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAnswer"
+        app:layout_constraintVertical_bias="0.049" />
 
     <TextView
         android:id="@+id/textAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="73dp"
+        android:layout_height="39dp"
+        android:gravity="center_horizontal"
         android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="463dp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagenQuestion"
+        app:layout_constraintVertical_bias="0.578" />
 
     <TextView
         android:id="@+id/textQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="289dp"
+        android:layout_height="200dp"
+        android:gravity="center_horizontal"
         android:text="TextView"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="178dp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/imagenQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/imagenQuestion"
+        app:layout_constraintTop_toTopOf="@+id/imagenQuestion"
+        app:layout_constraintVertical_bias="0.501" />
 </androidx.constraintlayout.widget.ConstraintLayout>

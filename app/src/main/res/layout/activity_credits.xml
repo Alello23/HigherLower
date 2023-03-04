@@ -8,11 +8,14 @@
 
     <TextView
         android:id="@+id/ranking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="46dp"
+        android:layout_width="164dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_horizontal"
         android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score" />
 
@@ -21,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="209dp"
+        android:layout_marginTop="148dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -30,11 +33,13 @@
 
     <TextView
         android:id="@+id/score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="81dp"
+        android:layout_width="169dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="108dp"
+        android:gravity="center_horizontal"
         android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,11 +65,11 @@
 
     <Button
         android:id="@+id/breturn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="7dp"
-        android:text="Button"
+        android:layout_width="52dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:icon="@drawable/baseline_home_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
