@@ -28,6 +28,7 @@ public class game extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
 
         //Relacionamos todas las variables.
         imageQuestion = (ImageView) findViewById(R.id.imagenQuestion);
@@ -47,6 +48,8 @@ public class game extends AppCompatActivity {
                 new Pregunta(R.string.question4,R.string.total4)
         };
 
+        first_update_preguntes();
+
         //Esperamos a la accion de un boton.
         bLower.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,20 +64,19 @@ public class game extends AppCompatActivity {
             }
         });
 
-        setContentView(R.layout.activity_game);
     }
 
     //Comprueba si es correcto
     public void checkPregunta(int boto_id) {
         //Caso correcto
-        if (preguntes[index-1].getResposta_correcte() == boto_id){
+        if (preguntes[index].getResposta_correcte() == boto_id){
             int temp = index;
             update_preguntes();
-            if (Integer.parseInt(getString(preguntes[index - 1].getTotal())) > Integer.parseInt(getString(preguntes[temp - 1].getTotal()))){
-                preguntes[index - 1].setResposta_correcte(1);
+            if (Integer.parseInt(getString(preguntes[index].getTotal())) > Integer.parseInt(getString(preguntes[temp].getTotal()))){
+                preguntes[index].setResposta_correcte(1);
             }
             else{
-                preguntes[index - 1].setResposta_correcte(0);
+                preguntes[index].setResposta_correcte(0);
             }
             score++;
         }
@@ -87,8 +89,8 @@ public class game extends AppCompatActivity {
         }
     }
     public void update_preguntes(){
-        imageAnswer.setImageResource(preguntes[index - 1].getImagen());
-        textAnswer.setText("\"" + getString(preguntes[index - 1].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[index - 1].getTotal()) + "\n" + getString(R.string.answer_extra2) );
+        imageQuestion.setImageResource(preguntes[index].getImagen());
+        textQuestion.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[index].getTotal()) + "\n" + getString(R.string.answer_extra2) );
 
         int temp = index;
         while (index == temp){
@@ -97,7 +99,39 @@ public class game extends AppCompatActivity {
         }
         index = temp;
 
-        imageQuestion.setImageResource(preguntes[index - 1].getImagen());
-        textQuestion.setText("\"" + getString(preguntes[index - 1].getPregunta()) + "\"\n" + getString(R.string.answer_extra));
+        imageAnswer.setImageResource(preguntes[index].getImagen());
+
+//        textAnswer.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[index].getTotal()) + "\n" + getString(R.string.answer_extra2) );
+        textAnswer.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra));
+    }
+
+    public void first_update_preguntes(){
+
+        Random rand = new Random();
+
+
+        int temp = rand.nextInt(preguntes.length);
+
+        imageQuestion.setImageResource(preguntes[temp].getImagen());
+        textQuestion.setText("\"" + getString(preguntes[temp].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[temp].getTotal()) + "\n" + getString(R.string.answer_extra2) );
+
+        index = temp;
+
+        while (index == temp){
+            index = rand.nextInt(preguntes.length);
+        }
+
+        imageAnswer.setImageResource(preguntes[index].getImagen());
+//        textAnswer.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[index].getTotal()) + "\n" + getString(R.string.answer_extra2) );
+        textAnswer.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra));
+
+        if (Integer.parseInt(getString(preguntes[index].getTotal())) > Integer.parseInt(getString(preguntes[temp].getTotal()))){
+            preguntes[index].setResposta_correcte(1);
+        }
+        else{
+            preguntes[index].setResposta_correcte(0);
+        }
+
+
     }
 }
