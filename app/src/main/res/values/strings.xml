@@ -9,14 +9,27 @@
     <string name="higher">higher</string>
     <string name="lower">lower</string>
 
-    <string name="question1">ElRubius</string>
-    <string name="total1">330</string>
-    <string name="question2">alello23</string>
-    <string name="total2">1000</string>
-    <string name="question3">blue</string>
-    <string name="total3">2000</string>
-    <string name="question4">cat</string>
-    <string name="total4">100000</string>
+    <string name="question1">Maradona</string>
+    <string name="total1">450000</string>
+    <string name="question2">Piano</string>
+    <string name="total2">6120000</string>
+    <string name="question3">Mechanic</string>
+    <string name="total3">450000</string>
+    <string name="question4">Wordpress</string>
+    <string name="total4">3350000</string>
+    <string name="question5">Netflix</string>
+    <string name="total5">83100000</string>
+    <string name="question6">Bruno Mars</string>
+    <string name="total6">3350000</string>
+    <string name="question7">Taekwondo</string>
+    <string name="total7">673000</string>
+    <string name="question8">Venus</string>
+    <string name="total8">1220000</string>
+    <string name="question9">Shaquille O\'Neal</string>
+    <string name="total9">550000</string>
+    <string name="question10">YouTube</string>
+    <string name="total10">1680000000</string>
+
 
     //Pantalla Creditos
 

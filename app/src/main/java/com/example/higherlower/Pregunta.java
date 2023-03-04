@@ -8,12 +8,10 @@ public class Pregunta {
 
     private int resposta_correcte;
 
-    public Pregunta(int pregunta, int total) {
+    public Pregunta(int pregunta, int total, int imagen) {
         this.pregunta = pregunta;
         this.total = total;
-    }
-    public int setImagen(){
-        return imagen;
+        this.imagen = imagen;
     }
 
     public int getImagen() {

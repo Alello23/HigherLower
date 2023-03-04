@@ -42,10 +42,16 @@ public class game extends AppCompatActivity {
 
         //Añadimos todas las preguntas
         preguntes = new Pregunta[]{
-                new Pregunta(R.string.question1,R.string.total1),
-                new Pregunta(R.string.question2,R.string.total2),
-                new Pregunta(R.string.question3,R.string.total3),
-                new Pregunta(R.string.question4,R.string.total4)
+                new Pregunta(R.string.question1,R.string.total1, R.drawable.logo_),
+                new Pregunta(R.string.question2,R.string.total2, R.drawable.logo_),
+                new Pregunta(R.string.question3,R.string.total3, R.drawable.logo_),
+                new Pregunta(R.string.question4,R.string.total4, R.drawable.logo_),
+                new Pregunta(R.string.question5,R.string.total5, R.drawable.logo_),
+                new Pregunta(R.string.question6,R.string.total6, R.drawable.logo_),
+                new Pregunta(R.string.question7,R.string.total7, R.drawable.logo_),
+                new Pregunta(R.string.question8,R.string.total8, R.drawable.logo_),
+                new Pregunta(R.string.question9,R.string.total9, R.drawable.logo_),
+                new Pregunta(R.string.question10,R.string.total10, R.drawable.logo_)
         };
 
         first_update_preguntes();
@@ -90,7 +96,7 @@ public class game extends AppCompatActivity {
     }
     public void update_preguntes(){
         imageQuestion.setImageResource(preguntes[index].getImagen());
-        textQuestion.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[index].getTotal()) + "\n" + getString(R.string.answer_extra2) );
+        textQuestion.setText("\"" + getString(preguntes[index].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + num_view(getString(preguntes[index].getTotal())) + "\n" + getString(R.string.answer_extra2) );
 
         int temp = index;
         while (index == temp){
@@ -113,7 +119,7 @@ public class game extends AppCompatActivity {
         int temp = rand.nextInt(preguntes.length);
 
         imageQuestion.setImageResource(preguntes[temp].getImagen());
-        textQuestion.setText("\"" + getString(preguntes[temp].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + getString(preguntes[temp].getTotal()) + "\n" + getString(R.string.answer_extra2) );
+        textQuestion.setText("\"" + getString(preguntes[temp].getPregunta()) + "\"\n" + getString(R.string.answer_extra) + "\n" + num_view(getString(preguntes[temp].getTotal())) + "\n" + getString(R.string.answer_extra2) );
 
         index = temp;
 
@@ -131,5 +137,30 @@ public class game extends AppCompatActivity {
         else{
             preguntes[index].setResposta_correcte(0);
         }
+    }
+    public String num_view (String number){
+
+        int temp = Integer.parseInt (number);
+        String a = "";
+        while (temp >= 100){
+            int num = temp % 1000;
+            temp = temp/1000;
+            if(num == 0){
+                a = ",000" + a;
+            }
+            else if(num < 10){
+                a = ",00" + String.valueOf(num) + a;
+            }
+            else if (num < 100){
+                a = ",0" + String.valueOf(num) + a;
+            }else{
+                a = "," + String.valueOf(num) + a;
+            }
+        }
+        if (temp != 0) {
+            a = String.valueOf(temp) + a;
+        }
+
+        return a;
     }
 }

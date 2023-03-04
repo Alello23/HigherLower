@@ -10,12 +10,13 @@
         android:id="@+id/imagenQuestion"
         android:layout_width="413dp"
         android:layout_height="374dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.005"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -61,6 +62,7 @@
         android:gravity="center_horizontal"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#F6F6F6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +76,7 @@
         android:gravity="center_horizontal"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/imagenQuestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
