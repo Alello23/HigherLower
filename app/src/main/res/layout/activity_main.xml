@@ -23,8 +23,9 @@
         android:id="@+id/imageView2"
         android:layout_width="491dp"
         android:layout_height="338dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="216dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc" />
