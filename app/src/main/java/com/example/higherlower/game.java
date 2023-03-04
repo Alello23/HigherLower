@@ -131,7 +131,5 @@ public class game extends AppCompatActivity {
         else{
             preguntes[index].setResposta_correcte(0);
         }
-
-
     }
 }

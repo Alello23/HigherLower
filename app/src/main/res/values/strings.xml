@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">higherlower</string>
+    <string name="app_name">Higherlower</string>
 
+    //Pantalla Menu
+    <string name="bStart">Start Game</string>
+    //Pantalla Game
     <string name="answer_extra">has</string>
     <string name="answer_extra2">average monthly searches</string>
     <string name="higher">higher</string>
@@ -14,5 +17,7 @@
     <string name="total3">2000</string>
     <string name="question4">cat</string>
     <string name="total4">100000</string>
+
+    //Pantalla Creditos
 
 </resources>
