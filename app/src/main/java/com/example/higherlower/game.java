@@ -3,6 +3,7 @@ package com.example.higherlower;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -140,25 +141,10 @@ public class game extends AppCompatActivity {
     }
     public String num_view (String number){
 
-        int temp = Integer.parseInt (number);
-        String a = "";
-        while (temp >= 1000){
-            int num = temp % 1000;
-            temp = temp/1000;
-            if(num == 0){
-                a = ",000" + a;
-            }
-            else if(num < 10){
-                a = ",00" + String.valueOf(num) + a;
-            }
-            else if (num < 100){
-                a = ",0" + String.valueOf(num) + a;
-            }
-        }
-        if (temp != 0) {
-            a = String.valueOf(temp) + a;
-        }
+        int num = Integer.parseInt(number);
+        DecimalFormat formato = new DecimalFormat("#,###");
+        String cadena = formato.format(num);
 
-        return a;
+        return cadena;
     }
 }
