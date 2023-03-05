@@ -32,5 +32,7 @@
 
 
     //Pantalla Creditos
+    <string name="Sutmit">Submit</string>
+    <string name="PlayAgain">Play_Again</string>
 
 </resources>
