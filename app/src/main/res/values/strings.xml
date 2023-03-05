@@ -6,8 +6,6 @@
     //Pantalla Game
     <string name="answer_extra">has</string>
     <string name="answer_extra2">average monthly searches</string>
-    <string name="higher">higher</string>
-    <string name="lower">lower</string>
 
     <string name="question1">Maradona</string>
     <string name="total1">450000</string>
@@ -32,7 +30,9 @@
 
 
     //Pantalla Creditos
-    <string name="Sutmit">Submit</string>
-    <string name="PlayAgain">Play_Again</string>
+    <string name="score">Score：</string>
+    <string name="ranking">Ranking\n</string>
+
+
 
 </resources>

@@ -22,9 +22,10 @@ public class game extends AppCompatActivity {
     private Button bHigher;
     private TextView textAnswer;
     private TextView textQuestion;
+    private TextView textScore;
     private int index = 1;
     private Pregunta[] preguntes;
-    private int score;
+    private int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,19 +41,25 @@ public class game extends AppCompatActivity {
 
         textAnswer = (TextView) findViewById(R.id.textAnswer);
         textQuestion = (TextView) findViewById(R.id.textQuestion);
+        textScore = (TextView) findViewById(R.id.textScore);
+
+        textScore.setText(getString(R.string.score) + Integer.toString(score));
+
+        View viewOscuro = findViewById(R.id.view_oscuro);
+        viewOscuro.setAlpha(0.75f); // Ajusta la opacidad al 50%
 
         //Añadimos todas las preguntas
         preguntes = new Pregunta[]{
-                new Pregunta(R.string.question1,R.string.total1, R.drawable.logo_),
-                new Pregunta(R.string.question2,R.string.total2, R.drawable.logo_),
-                new Pregunta(R.string.question3,R.string.total3, R.drawable.logo_),
-                new Pregunta(R.string.question4,R.string.total4, R.drawable.logo_),
-                new Pregunta(R.string.question5,R.string.total5, R.drawable.logo_),
-                new Pregunta(R.string.question6,R.string.total6, R.drawable.logo_),
-                new Pregunta(R.string.question7,R.string.total7, R.drawable.logo_),
-                new Pregunta(R.string.question8,R.string.total8, R.drawable.logo_),
-                new Pregunta(R.string.question9,R.string.total9, R.drawable.logo_),
-                new Pregunta(R.string.question10,R.string.total10, R.drawable.logo_)
+                new Pregunta(R.string.question1,R.string.total1, R.drawable.maradona),
+                new Pregunta(R.string.question2,R.string.total2, R.drawable.piano),
+                new Pregunta(R.string.question3,R.string.total3, R.drawable.aplicaciones_aprender_mecanica),
+                new Pregunta(R.string.question4,R.string.total4, R.drawable.wordpress),
+                new Pregunta(R.string.question5,R.string.total5, R.drawable.netflix),
+                new Pregunta(R.string.question6,R.string.total6, R.drawable.bruno_mars),
+                new Pregunta(R.string.question7,R.string.total7, R.drawable.taewondo),
+                new Pregunta(R.string.question8,R.string.total8, R.drawable.venus),
+                new Pregunta(R.string.question9,R.string.total9, R.drawable.shaquille_oneal),
+                new Pregunta(R.string.question10,R.string.total10, R.drawable.youtube)
         };
 
         first_update_preguntes();
@@ -86,6 +93,7 @@ public class game extends AppCompatActivity {
                 preguntes[index].setResposta_correcte(0);
             }
             score++;
+            textScore.setText(getString(R.string.score) + Integer.toString(score));
         }
         //Caso Incorrecto
         else {
