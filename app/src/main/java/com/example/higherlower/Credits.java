@@ -63,10 +63,11 @@ public class Credits extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Crea un objeto Intent para volver al juego
+                finish();
                 Intent data = new Intent();
                 data.putExtra("RESPOSTA MIRADA", 3);
                 setResult(RESULT_OK, data);
-                finish();
+
             }
         });
 
