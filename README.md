@@ -1,45 +1,45 @@
 # HigherLower
 
-HigherLower es una aplicación de Android que permite a los usuarios jugar al juego "Higher or Lower", en el cual deben adivinar si el valor o popularidad de un tema es mayor o menor que el mostrado anteriormente. Este proyecto está desarrollado en Java y utiliza Gradle como sistema de construcción.
+HigherLower is an Android application that allows users to play the "Higher or Lower" game, where they must guess whether the value or popularity of a topic is higher or lower than the one previously shown. This project is developed in Java and uses Gradle as the build system.
 
-## Características
+## Features
 
-- **Juego de Adivinanza**: El usuario puede intentar adivinar si un valor es más alto o bajo que el anterior.
-- **Interfaz Amigable**: Diseñado para ofrecer una experiencia de usuario fluida e intuitiva.
-- **Contenido Visual**: Incluye imágenes y un diseño gráfico atractivo.
+- **Guessing Game**: Users can try to guess whether a value is higher or lower than the previous one.
+- **User-Friendly Interface**: Designed to provide a smooth and intuitive user experience.
+- **Visual Content**: Includes images and an attractive graphic design.
   
-## Requisitos
+## Requirements
 
 - Android Studio
-- Gradle 7.0 o superior
-- Dispositivo o emulador con Android 5.0 (Lollipop) o superior
+- Gradle 7.0 or higher
+- Device or emulator with Android 5.0 (Lollipop) or higher
 
-## Instalación
+## Installation
 
-1. Clona este repositorio:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/tuusuario/HigherLower.git
+   git clone https://github.com/yourusername/HigherLower.git
    ```
-2. Abre el proyecto en Android Studio.
-3. Sincroniza el proyecto con Gradle.
-4. Ejecuta el proyecto en un dispositivo o emulador.
+2. Open the project in Android Studio.
+3. Sync the project with Gradle.
+4. Run the project on a device or emulator.
 
-## Estructura del Proyecto
+## Project Structure
 
-- **app/src/main/java/com/example/higherlower/**: Contiene el código fuente de la aplicación, incluidas las actividades principales como `MainActivity` y `game`.
-- **app/src/main/res/**: Contiene los recursos de la aplicación como layouts, imágenes y strings.
+- **app/src/main/java/com/example/higherlower/**: Contains the application source code, including main activities like `MainActivity` and `game`.
+- **app/src/main/res/**: Contains the application resources such as layouts, images, and strings.
 
-## Uso
+## Usage
 
-1. Al iniciar la aplicación, se mostrará la pantalla principal.
-2. Selecciona "Jugar" para empezar el juego.
-3. Adivina si el valor es más alto o más bajo al hacer clic en los botones correspondientes.
+1. Upon starting the application, the main screen will be displayed.
+2. Select "Play" to start the game.
+3. Guess whether the value is higher or lower by clicking the corresponding buttons.
 
-## Créditos
+## Credits
 
-- Desarrollado por [Alex liu].
-- Iconos e imágenes utilizados están bajo las respectivas licencias de sus autores.
+- Developed by [Alex Liu].
+- Icons and images used are under their respective licenses from their authors.
 
-## Licencia
+## License
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
