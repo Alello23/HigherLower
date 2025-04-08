@@ -1,5 +1,5 @@
 # HigherLower
-
+![Mi proyecto](assets/higher.jpg)
 HigherLower is an Android application that allows users to play the "Higher or Lower" game, where they must guess whether the value or popularity of a topic is higher or lower than the one previously shown. This project is developed in Java and uses Gradle as the build system.
 
 ## Features
